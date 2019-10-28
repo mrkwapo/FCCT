@@ -37,4 +37,4 @@ myReplace('He is Sleeping on the couch', 'Sleeping', 'sitting'); //should return
 
 // myReplace('Let us get back to more Coding', 'Coding', 'algorithms'); //should return "Let us get back to more Algorithms".
 
-T: 35;
+//T: 35;
