@@ -14,22 +14,24 @@ function myReplace(str, before, after) {
   var regex = RegExp(before, 'g');
 
   for (var i = 0; i < before.length; i++) {
+    //preserving case
     if (before[i] === before[i].toUpperCase()) {
       var cased = after[0].toUpperCase() + after.slice(1);
-
+      console.log(str.replace(regex, cased));
       return str.replace(regex, cased);
     }
   }
+  console.log(str.replace(regex, after));
   return str.replace(regex, after);
 }
 
 //Test cases below
 
-//myReplace('A quick brown fox jumped over the lazy dog', 'jumped', 'leaped');
+myReplace('A quick brown fox jumped over the lazy dog', 'jumped', 'leaped');
 
 // myReplace('Let us go to the store', 'store', 'mall'); //should return "Let us go to the mall".
 
-myReplace('He is Sleeping on the couch', 'Sleeping', 'sitting'); //should return "He is Sitting on the couch".
+// myReplace('He is Sleeping on the couch', 'Sleeping', 'sitting'); //should return "He is Sitting on the couch".
 
 // myReplace('This has a spellngi error', 'spellngi', 'spelling'); //should return "This has a spelling error".
 
