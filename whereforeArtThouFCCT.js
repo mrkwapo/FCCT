@@ -4,34 +4,33 @@
 // For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), because it contains the name and its value, that was passed on as the second argument.
 
 function whatIsInAName(collection, source) {
-  // What's in a name?
-  var arr = [];
-  // Only change code below this line
-  //console.log(collection);
-  var first = arguments[0];
-  for (var i = 0; i < first.length; i++) {
-    var eachObj = arguments[0][i];
-    //console.log(eachObj);
-    if (Object.values(eachObj).includes(Object.values(source).toString())) {
+  let arr = [];
+  let first = arguments[0];
+  for (let i = 0; i < first.length; i++) {
+    let eachObj = arguments[0][i];
+    if (
+      Object.keys(eachObj)
+        .toString()
+        .includes(Object.keys(source).toString()) &&
+      Object.values(eachObj)
+        .toString()
+        .includes(Object.values(source).toString())
+    ) {
       arr.push(eachObj);
     }
-    console.log(
-      Object.values(eachObj).includes(Object.values(source).toString())
-    );
   }
   console.log(arr);
-  // Only change code above this line
   return arr;
 }
 
-whatIsInAName(
-  [
-    { first: 'Romeo', last: 'Montague' },
-    { first: 'Mercutio', last: null },
-    { first: 'Tybalt', last: 'Capulet' }
-  ],
-  { last: 'Capulet' }
-);
+// whatIsInAName(
+//   [
+//     { first: 'Romeo', last: 'Montague' },
+//     { first: 'Mercutio', last: null },
+//     { first: 'Tybalt', last: 'Capulet' }
+//   ],
+//   { last: 'Capulet' }
+// );
 
 whatIsInAName(
   [{ apple: 1, bat: 2 }, { apple: 1 }, { apple: 1, bat: 2, cookie: 2 }],
