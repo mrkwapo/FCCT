@@ -6,7 +6,7 @@ function dropElements(arr, func) {
       return arr.slice(arr.indexOf(arr[i]))
     }
   }
-  //if nothing in the arr array meets the requirements of func, slice all numbers in the array and return an empty array
+  //if nothing in the arr array meets the requirements of func, drop/slice all numbers in the array and return an empty array
   return arr.slice(arr.indexOf(arr.length) + 1);
 }
 
