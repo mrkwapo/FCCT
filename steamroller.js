@@ -1,5 +1,5 @@
-Intermediate Algorithm Scripting: Steamroller
-Flatten a nested array. You must account for varying levels of nesting.
+//Intermediate Algorithm Scripting: Steamroller
+//Flatten a nested array. You must account for varying levels of nesting.
 
 function steamrollArray(arr) {
   var newArray = [];
